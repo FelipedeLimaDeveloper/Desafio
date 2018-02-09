@@ -1,0 +1,123 @@
+*{
+    padding : 0;
+    margin : 0;
+    border : 0;
+}
+body {
+    background-color: darkorange;
+    font-family: sans-serif;
+     height: auto;
+}
+.conteudo {
+    margin: 60px 180px;
+    height: auto;
+}
+.header {
+    background-color: #000033;
+    margin-top: 60px;
+    height: 100px; 
+}
+
+.menu {
+    height: 459px;
+    width: 195px; 
+    background-color: lightgray; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+    display: block;
+    padding: 2px 4px;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0%;
+    overflow: hidden;
+}
+
+li > a {
+    display: block;
+    color: #000033;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-weight: bold;
+    list-style-type: none;
+    margin: 5px 0px
+}
+li > a:hover {
+    background-color: #000033;
+    color: whitesmoke;
+}
+.data {
+    height: 463px; 
+    width: 100%; 
+    background-color: whitesmoke;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+
+#txbBusca {
+    margin-top: 40px;
+    margin-left: 150px;
+    width: 500px;
+}
+table {
+    margin-top: 20px;
+    margin-right:auto; 
+    margin-left:auto;
+    padding: 5px;
+}
+th, td{
+    padding-left: 60px;
+}
+#btnAdd{
+    text-decoration: none;
+    background-color: #000033;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+    width: 120px;
+    font-weight: bold;
+}
+#btnCancelar, #btnSalvar {
+    text-decoration: none;
+    background-color: #000033;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+    width: 120px;
+    font-weight: bold;
+}
+
+#form {
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 250px;
+    display: none;
+}
+#txtNome {
+    width: 700px;
+    font-size: 25px;
+}
+#btnCancelar {
+    margin-right: 10px;
+    background-color: red;
+}
+img {
+    max-height: 30px;
+    max-width:  30px;
+    margin-left: 10px;
+}

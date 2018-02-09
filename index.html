@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Desafio</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+        <script src="library/angular/angular.min.js"></script>
+        <script src="script/script.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div class="conteudo">
+            <div class="header">
+            </div>
+            
+            <div class="data" ng-controller="desafioCtrl">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="" ng-click="ordenarPor('nome'); cancel(pessoa)"> ORDENAR NOME</a></li>
+                        <li><a href="" ng-click="ordenarPor('dtNascimento'); cancel(pessoa)">ORDENAR NASCIMENTO</a></li>
+                        <li><a href="" ng-click="filtrarSexo('masculino'); cancel(pessoa)">FILTRO HOMENS</a></li>
+                        <li><a href="" ng-click="filtrarSexo('feminino'); cancel(pessoa)">FILTRO MULHERES</a></li>
+                    </ul>
+                </nav>
+                <input id="txbBusca" type="text" ng-model="procurar" ng-click="cancel(pessoa)" placeholder="QUALQUER COISA BACANA AQUI PARA SER BUSCADA :)">
+                <table>
+                    <thead>
+                        <th><b>NOME</b></th>
+                        <th><b>DT NASCIMENTO</b></th>
+                        <th><b>SEXO</b></th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="pessoa in pessoas | filter:procurar | filter:criterioFiltro | orderBy:criterioOrdenacao:direcaoOrdenacao">
+                        <td>{{pessoa.nome}}</td>
+                        <td>{{pessoa.dtNascimento | date: 'dd/MM/yyyy'}}</td>
+                        <td><img ng-src="{{pessoa.sexo == 'masculino' && 'img/man.png' || 'img/woman.png'}}"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <a href="" id="btnAdd" ng-click="showForm(); filtrarSexo('')">+ ADICIONAR</a>
+                <div id="form">
+                    <label >NOME <br><input id="txtNome" type="text" ng-model="pessoa.nome"></label>
+                    <br>
+                    <label >DT NASCIMENTO <br><input id="txtNascimento" type="date" ng-model="pessoa.dtNascimento"></label>
+                    
+                    <label>SEXO
+                        <select ng-model="pessoa.sexo">
+                              <option value="masculino">masculino</option>
+                              <option value="feminino">feminino</option>
+                        </select>
+                    </label>
+                    <a href="" id="btnSalvar" ng-click="addPessoa(pessoa)">SALVAR</a>
+                    <a href="" id="btnCancelar" ng-click="cancel(pessoa)">CANCELAR</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
